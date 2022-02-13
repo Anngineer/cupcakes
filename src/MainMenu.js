@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu } from "semantic-ui-react";
+import { Menu, Icon } from "semantic-ui-react";
 
 const MainMenu = () => {
   const [activeItem, setActiveItem] = useState("");
@@ -16,6 +16,7 @@ const MainMenu = () => {
         onClick={() => handleMenuItemClick("home")}
         active={activeItem === "home"}
       >
+        <Icon name="home" />
         Home
       </Menu.Item>
 
@@ -25,6 +26,7 @@ const MainMenu = () => {
           onClick={() => handleMenuItemClick("bakery")}
           active={activeItem === "bakery"}
         >
+          <Icon name="food" />
           Bakery
         </Menu.Item>
         <Menu.Item
@@ -32,7 +34,16 @@ const MainMenu = () => {
           onClick={() => handleMenuItemClick("play")}
           active={activeItem === "play"}
         >
+          <Icon name="game" />
           Play
+        </Menu.Item>
+        <Menu.Item
+          name="about"
+          onClick={() => handleMenuItemClick("about")}
+          active={activeItem === "about"}
+        >
+          <Icon name="info circle" />
+          About
         </Menu.Item>
       </Menu.Menu>
     </Menu>
