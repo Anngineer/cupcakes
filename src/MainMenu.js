@@ -47,7 +47,7 @@ const MainMenu = () => {
             active={activeItem === "play"}
           >
             <Icon name="game" />
-            Play
+            Play!
           </Menu.Item>
           <Menu.Item
             name="about"
